@@ -1,0 +1,26 @@
+1. Data Preprocessing:
+Importing Libraries: You imported necessary libraries for Exploratory Data Analysis (EDA), 
+text preprocessing, model building, and visualization.
+Loading Data: You loaded the dataset using pd.read_csv() function.
+Exploratory Data Analysis (EDA): You performed EDA by checking the shape of 
+the dataset and visualizing the distribution of spam and ham messages using sns.countplot().
+Downsampling: To balance the dataset, you downsampled the majority class 
+(ham messages) to match the number of samples in the minority class (spam messages).
+Text Preprocessing:
+Removed stopwords from the text data using the remove_stopwords() function.
+Created word clouds for both spam and ham messages using plot_word_cloud() function.
+
+2. Building the Model:
+Tokenization and Padding: You tokenized the text data and padded sequences to have the same length using Tokenizer and pad_sequences.
+Model Architecture: Constructed an LSTM-based model using Sequential() API from TensorFlow Keras.
+Model Compilation: Compiled the model using binary cross-entropy loss, accuracy metric, and Adam optimizer.
+
+
+3. Training the Model:
+Used fit() method to train the model on the preprocessed data.
+Applied Early Stopping and Reduce Learning Rate on Plateau callbacks to prevent overfitting and improve convergence.
+
+
+4. Model Performance Evaluation:
+Evaluated the model on the test data using evaluate() method to get test loss and accuracy.
+Plotted the training and validation accuracy over epochs using matplotlib.
